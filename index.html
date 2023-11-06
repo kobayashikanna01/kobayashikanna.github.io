@@ -1,1 +1,307 @@
-Hello, World!
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>北京大学王选所网络信息处理实验室</title>
+<link href="../../../css/icon.css" rel="stylesheet" type="text/css">
+<link href="../../../css/base.css" rel="stylesheet" type="text/css">
+<link href="../../../css/index.css" rel="stylesheet" type="text/css">
+<link href="../../../css/En/inner.css" rel="stylesheet" type="text/css">
+<link href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+	<script src="../../../js/html5.js" type="text/javascript"></script>
+	<script src="../../../js/response.min.js"></script>
+<![endif]-->
+<script type="text/javascript"> 
+	var browser={
+	    versions:function(){
+	        var u = navigator.userAgent, app = navigator.appVersion;
+	        return {//移动终端浏览器版本信息
+	            trident: u.indexOf('Trident') > -1, //IE内核
+	            presto: u.indexOf('Presto') > -1, //opera内核
+	            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+	            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+	            mobile: !!u.match(/AppleWebKit.*Mobile.*/)||u.indexOf('iPad') > -1, //是否为移动终端
+	            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+	            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+	            iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+	            iPad: u.indexOf('iPad') > -1, //是否iPad
+	            webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+	        };
+	    }(),
+	}
+	if(browser.versions.android || browser.versions.iPhone){
+		var url = document.location.href ;
+		var ext = url.substr(url.lastIndexOf("."),url.length) ;
+		if(ext != null && (ext == '.htm' || ext == '.html')){
+			url = url.substr(0,url.lastIndexOf(".")) ;
+			url = url + "_mobile" + ext ;
+		}else{
+			url = url + "index_mobile.htm" ;
+		}
+		document.location = url ;
+	}
+</script>
+ </head>
+
+<body>
+
+
+<header class="header"> 
+  
+
+<section>
+		<div class="topLine"></div>
+		<section class="subNav yahei clearfix">
+			<section class="ssubNav">
+        <!--<img id="subNavlogo" src="img/mnav.png" style="width:22px;height:17px;padding-bottom:6px;">-->
+        <span id="navline_1" class="navline"></span>
+        <span id="navline_2" class="navline"></span>
+        <span id="navline_3" class="navline" style="margin-bottom:2px;"></span>
+      </section>
+			<section class="mainWrap mainWrap02 noline">
+				<ul class="subNavRight" style="list-style-type:none;">
+				  <li><a href="../../../lxwm/index.htm">联系我们</a></li>
+          <li><a href="http://www.wict.pku.edu.cn/ ">王选所</a></li>
+          <li><a href="https://portal.pku.edu.cn/">校内门户</a></li>
+          <li><a href="https://its.pku.edu.cn/">网络服务</a></li>
+          <li><a href="http://pkunews.pku.edu.cn/">北大新闻</a></li>
+          <li><a href="../../../english/index.htm">English</a></li>
+          <li id="form_Search_itme">
+            <form id="form_Search" name="formSearch" method="get" action="" target="_blank" class="search">
+						  <input id="form_Searchword" name="word" class="inp" onFocus="" onBlur="" type="text" >
+              <a id="form_Search_a" href="javascript:document.forms['formSearch'].submit();" class="glyphicon glyphicon-search btn searchlogo" style="font-size:12px;">                
+              </a>
+					   </form>
+					</li>
+				</ul>
+			</section>
+			<!-- search -->
+			<section class="clearfix"></section>			
+			
+			<!-- for mobile [begin] -->
+			<section id="mobileNav" class="onlymobileshow clearfix">
+        <div style="background-color:#fff;clear:both;padding-bottom:7px;line-height:30px;font-size:16px; color:#000;">
+          <ul style="list-style-type:none;">
+                          <li><a href="../../index.htm">实验室概况</a></li>
+                          <li><a href="../../../sysdt/index.htm">实验室动态</a></li>
+                          <li><a href="../../../jxyyj/index.htm">教学与研究</a></li>
+                          <li><a href="../../../zpxx/index.htm">招聘信息</a></li>
+                          <li><a href="../../../lxwm/index.htm">联系我们</a></li>
+                          <li><a href="../../../demo/index.htm">Demo</a></li>
+                        <li><a href="../../../lxwm/index.htm">联系我们</a></li>
+            <li><a href="http://www.wict.pku.edu.cn">王选所</a></li>
+            <li><a href="https://portal.pku.edu.cn/">校内门户</a></li>
+            <li><a href="https://its.pku.edu.cn/">网络服务</a></li>
+            <li><a href="http://pkunews.pku.edu.cn/">北大新闻</a></li>
+            <li><a href="../../../english/index.htm">English</a></li>
+            <li>
+              <form id="formSearch2" method="get" action="http://162.105.205.253/cgi-bin/allsearch" target="_blank">
+                <input name="word"  onFocus="" onBlur="" type="text">
+                <a href="javascript:document.forms['formSearch2'].submit();" class="glyphicon glyphicon-search btn" onClick="" title="Search"></a>
+              </form>
+            </li>
+          </ul>
+        </div>
+			</section>
+			<!--  for mobile [end] -->
+		</section>
+
+		<section class="topWrap clearfix">
+			<section class="mainWrap">
+        <span class="logo">
+          <a href="http://www.pku.edu.cn/" title="北京大学"><img src="../../../images/pkulogo_red.png"></a>
+          <a class="xkb_logo" href="../../../index.htm" title="网络信息处理实验室">王选计算机研究所<br>网络信息处理实验室</a>
+        </span>
+      </section>
+
+			<section class="nav yahei clearfix noMobileShow" style="clear:both;">
+			  <ul id="nav" style="list-style-type:none;">
+                                                              <li class="nav_first">
+                  <a href="../../index.htm">实验室概况</a>
+                  <ul class="sub-nav">
+                                          <li><a href="../../jj/index.htm">简介</a></li>
+                                          <li><a href="../index.htm">小组成员</a></li>
+                                      </ul>
+                </li>
+                                                                                                <li>
+                    <a href="../../../sysdt/index.htm">实验室动态</a>
+                    <ul class="sub-nav">
+                                              <li><a href="../../../sysdt/yjjz/index.htm">研究进展</a></li>
+                                              <li><a href="../../../sysdt/xzbg/index.htm">学术报告</a></li>
+                                          </ul>
+                  </li>
+                                                                                                                <li>
+                    <a href="../../../jxyyj/index.htm">教学与研究</a>
+                    <ul class="sub-nav">
+                                              <li><a href="../../../jxyyj/kskc/index.htm">开设课程</a></li>
+                                              <li><a href="../../../jxyyj/yjgs/index.htm">研究概述</a></li>
+                                              <li><a href="../../../jxyyj/hjqk/index.htm">获奖情况</a></li>
+                                              <li><a href="../../../jxyyj/lwlb/index.htm">论文列表</a></li>
+                                          </ul>
+                  </li>
+                                                                                                                <li>
+                    <a href="../../../zpxx/index.htm">招聘信息</a>
+                    <ul class="sub-nav">
+                                              <li><a href="../../../zpxx/jsbshzp/index.htm">教师、博士后招聘</a></li>
+                                              <li><a href="../../../zpxx/sxjk/index.htm">实习机会</a></li>
+                                          </ul>
+                  </li>
+                                                                                                                <li><a href="../../../lxwm/index.htm">联系我们</a></li>
+                                                                                                                <li><a href="../../../demo/index.htm">Demo</a></li>
+                                                    				</ul>
+			</section>
+		</section>
+	</section></header>
+<div class="main-body">
+  <div class="bouti-tit">
+    <div class="bouti-link bouti-link-intro_parent_parent">
+   	
+
+<!--<script type="text/javascript">
+var arr1 = [
+           '../../../images/content/2022-06/20220630161849349756.png',
+            '../../../images/content/2022-06/20220630150238960227.png',
+            '../../../images/content/2020-04/20200409220110542113.png'
+     ];
+var arr2 = ['../../../images/img_small1.jpg','../../../images/img_small2.jpg','../../../images/img_small3.jpg','../../../images/img_small4.jpg','../../../images/img_small5.jpg','../../../images/img_small6.jpg'];
+var iLen1 = arr1.length;
+var iLen2 = arr2.length;
+var iNum = 0;
+$(function(){
+	iNum1 = Math.floor(Math.random()*iLen1);
+	iNum2 = Math.floor(Math.random()*iLen2);
+	$('.bouti-link img').attr('src',arr1[iNum1]);
+	$('.introTitImg img').attr('src',arr2[iNum2]);
+	})
+
+</script> -->
+
+
+
+ 
+           <img src="../../../images/20230303111345928366.jpg">
+         
+ 			<div class="boutiCon">
+				<h3>小组成员</h3>
+			</div>
+			<div class="boutiConBg"></div>
+		</div>
+	</div>
+  <div class="content">
+  	<section class="sub-header">
+  		<section class="mobSecNav">
+        <img id="subNavlogo" src="/pub/sjglsys/images/mnav2.png" style="padding-bottom:6px;">
+      </section>
+  		<section class="mobSecNavMenu">
+  		  <ul style="list-style-type:none;">
+  			                            <li><a href="../js/index.htm">教师</a></li>
+                                                <li class="cur"><a href="index.htm">博士研究生</a></li>
+                                                <li><a href="../ssyjs/index.htm">硕士研究生</a></li>
+                                                <li><a href="../ybyxs/index.htm">已毕业学生</a></li>
+                           	  </ul>
+  		</section>        			
+  	</section>
+    <div class="col_lg_10 top"></div>
+    <div class="col_lg_3 col_md_3">
+      <div class="introTit clearfix">
+        <div class="introTitImg_parent_parent introTitImg"><img src="" /></div>
+        <h2>小组成员</h2>
+      </div>
+      <div class="detailContent">
+        <section class="leftNav">
+          <ul class="yahei" style="list-style-type:none;">
+                                          <li><a class="cls_swap" href="../js/index.htm">教师</a></li>
+                                                        <li class="current"><a class="cls_swap" href="index.htm">博士研究生</a></li>
+                                                        <li><a class="cls_swap" href="../ssyjs/index.htm">硕士研究生</a></li>
+                                                        <li><a class="cls_swap" href="../ybyxs/index.htm">已毕业学生</a></li>
+                                    </ul>
+  			</section>
+      </div>        
+    </div>
+    <div class="col_lg_7 col_md_7">
+      <div class="mainContent">
+        <div class="pageArticle">
+          <div class="articleTitle">
+            <h2>陶铭绪</h2>
+          </div>
+          <div class="article">
+            <p><img class="left"  src="../../../images/content/2023-03/20230321215451660313.jpeg" style="width: 200px; height: 267px;" /></p>
+
+<p><span style="font-family: 微软雅黑;"><span style="font-size: 20px;">北京大学&nbsp;</span></span></p>
+
+<p><span style="font-size:20px;"><span style="font-family:黑体;">前沿交叉学科研究院</span></span></p>
+
+<p><span style="font-family: 微软雅黑;"><span style="font-size: 20px;">数据科学专业</span></span></p>
+
+<p><span style="font-family: 微软雅黑;"><span style="font-size: 20px;">博士研究生</span></span></p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left: 2em;">&nbsp;</p>
+
+<div data-hash="d37e1ce67ed10a52d1adf4605bfffcd9" data-version="3.0.0" tdoc-data-src="{&quot;mainStory&quot;:[{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;冯家展于2019年起在北京大学智能学院攻读计算机应用技术专业博士研究生。&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:0,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:0,&quot;len&quot;:36},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;}],&quot;subStory&quot;:[],&quot;srcGlobalPadId&quot;:&quot;300000000$DHBgyLpuiHEL&quot;,&quot;copyStart&quot;:19407}">&nbsp;</div>
+
+<div>
+<div class="document">
+<div class="section">
+<p class="paragraph text-align-type-left" style="margin: 4px 0pt; font-family: 等线; font-size: 12pt; line-height: 16px;"><span data-font-family="&quot;Microsoft YaHei&quot;" style="font-size: 12pt; font-family: &quot;Microsoft YaHei&quot;; letter-spacing: 0pt; vertical-align: baseline;">&nbsp; &nbsp; &nbsp;</span></p>
+
+<div data-hash="347f28619d3e9baa608ae684a6cf8e4d" data-version="3.0.0" tdoc-data-src="{&quot;mainStory&quot;:[{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;徐瑞健于2018年毕业于北京大学信息科学技术学院，获得计算机科学与技术专业理学学士学位，目前于北京大学前沿交叉学科研究院攻读数据科学专业攻读数据科学专业博士学位。&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:0,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:0,&quot;len&quot;:81},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:81,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:81,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:81,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;研究兴趣&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:82,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:82,&quot;len&quot;:4},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:86,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:86,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:86,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;目前专注于研究数据驱动的开放域对话系统。&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:87,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:87,&quot;len&quot;:20},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:107,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:107,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:107,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;联系方式 xurj@pku.edu.cn&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:108,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:108,&quot;len&quot;:20},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:128,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:128,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:128,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;业余爱好&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:129,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:129,&quot;len&quot;:4},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:133,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:133,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:133,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;旅行，泡温泉，散步，喂猫&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:134,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:134,&quot;len&quot;:12},&quot;property&quot;:{&quot;rFonts&quot;:{&quot;ascii&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;hAnsi&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;eastAsia&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;,&quot;cs&quot;:&quot;\&quot;Microsoft YaHei\&quot;&quot;},&quot;b&quot;:{&quot;val&quot;:false},&quot;i&quot;:{&quot;val&quot;:false},&quot;strike&quot;:{&quot;val&quot;:false},&quot;color&quot;:{&quot;val&quot;:&quot;000000&quot;},&quot;spacing&quot;:{&quot;val&quot;:0},&quot;sz&quot;:{&quot;val&quot;:240},&quot;u&quot;:{&quot;val&quot;:&quot;STUnderline_none&quot;},&quot;author&quot;:&quot;p.144115226608215157&quot;},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;InsertText&quot;,&quot;param&quot;:{&quot;text&quot;:&quot;\r&quot;,&quot;range&quot;:{&quot;gcpBegin&quot;:146,&quot;len&quot;:0}},&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyRunProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:146,&quot;len&quot;:1},&quot;property&quot;:{&quot;author&quot;:&quot;p.144115226608215157&quot;,&quot;isPlaceholder&quot;:true},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;RunProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;},{&quot;operationType&quot;:&quot;ModifyParagraphProp&quot;,&quot;param&quot;:{&quot;range&quot;:{&quot;gcpBegin&quot;:146,&quot;len&quot;:1},&quot;property&quot;:{&quot;snapToGrid&quot;:{&quot;val&quot;:true},&quot;spacing&quot;:{&quot;line&quot;:240},&quot;ind&quot;:{&quot;hanging&quot;:0},&quot;numPr&quot;:{}},&quot;mode&quot;:1},&quot;propertyType&quot;:&quot;ParagraphProperty&quot;,&quot;builtinStyleName&quot;:&quot;&quot;}],&quot;subStory&quot;:[],&quot;srcGlobalPadId&quot;:&quot;300000000$DHBgyLpuiHEL&quot;,&quot;copyStart&quot;:20015}">&nbsp;</div>
+
+<div>
+<div class="document">
+<div class="section">
+<p class="paragraph text-align-type-left" style="margin: 4px 0pt; font-family: 等线; font-size: 12pt; line-height: 16px;">&nbsp;</p>
+
+<p>陶铭绪于2020年毕业于北京大学信息科学技术学院，获得计算机科学与技术专业理学学士学位、国家发展研究院经济学双学士学位。目前与北京大学前沿交叉学科研究院攻读数据科学专业博士学位。</p>
+
+<p>研究兴趣</p>
+
+<p>基于大规模预训练语言模型的高效微调和连续学习。</p>
+
+<p>联系方式</p>
+
+<p><a href="mailto:thomastao@pku.edu.cn">thomastao@pku.edu.cn</a></p>
+
+<p>业余爱好</p>
+
+<p>赛艇、冰壶、速度滑冰、公路骑行</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+          </div> 
+                  </div>
+      </div>
+    </div>  
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  
+
+  <section class="fot_bot" >
+    <span class="copyright">版权所有&copy;北京大学王选计算机研究所</span>
+    <span class="addr">地址：北京市海淀区中关村北大街128号</span>
+  <span class="postcode">邮编：100080</span> 
+    <!--  <span class="tech-sup">Email：gjsjdbgroup@pku.edu.cn</span>-->
+  </section></footer>
+
+<script src="../../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../../js/comm.js" type="text/javascript"></script>
+<script src="../../../js/inner.js" type="text/javascript"></script>
+
+ 
+
+
+</body></html>
